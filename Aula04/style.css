@@ -41,3 +41,19 @@ body > img {
 img {
   max-height: 250px;
 }
+
+.btn {
+  margin: 0 auto 30px;
+  max-width: 500px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.btn h2 {
+  margin: 0px 10px 10px 10px;
+}
+
+.btn input {
+  width: 250px;
+}

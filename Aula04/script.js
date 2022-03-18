@@ -1,4 +1,4 @@
-var listaFilmes = [
+var listaAnime = [
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXhERtxmqWKErqEPFbIhL-0wfg2wLKHJfWJu6aJ3Rj3Q_lBDauTXqXUlcJ3A8GBKZDcwo&usqp=CAU",
 
   "https://sm.ign.com/ign_br/tv/m/my-hero-ac/my-hero-academia_f9ae.jpg",
@@ -6,9 +6,34 @@ var listaFilmes = [
   "https://media.fstatic.com/XcbavtyoNtRzTHPYHEBzbJ24pvg=/290x478/smart/media/movies/covers/2015/04/akame-ga-kill_t101243.jpg"
 ];
 
-for (var i = 0; i < listaFilmes.length; i++) {
-  document.write("<img src=" + listaFilmes[i] + ">");
+//laço de repetição responsável por apresentar todos os livros add
+
+for (var i = 0; i < listaAnime.length; i++) {
+  document.write("<img src=" + listaAnime[i] + ">");
 }
+
+//funçao que adicionará as url's observando condições
+
+function incluirAnime() {
+  novoAnime = document.getElementById("novoAnime").value;
+
+  //condicional que testará se url já foi incluida anteriormente
+  if (listaAnime.indexOf(novoAnime) < 0) {
+    //fazendo o push caso a url seja nova
+    listaAnime.push(novoAnime);
+    document.body.innerHTML +=
+      "<img src=" + listaAnime[listaAnime.length - 1] + ">";
+  } else {
+    //alert na tela caso seja uma url já add
+    alert("Esse anime já existe no catálogo");
+  }
+}
+
+
+
+
+
+
 
 /*
 
